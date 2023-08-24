@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace Dashboard.Domain.Base
 {
+    /// <summary>
+    /// Базовая сущность.
+    /// </summary>
     internal class BaseEntity
     {
+        /// <summary>
+        /// Идентификатор сущности.
+        /// </summary>
+        public Guid Id { get; set; }
     }
 }
