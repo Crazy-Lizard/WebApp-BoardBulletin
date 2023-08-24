@@ -1,18 +1,16 @@
-using Dashboard.Contracts.Attachment;
-using Dashboard.Contracts.Base;
+﻿using Dashboard.Domain.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Dashboard.Contracts
+namespace Dashboard.Domain.Posts
 {
-
     /// <summary>
-    /// Обьявление. 
+    /// Сущность объявлений.
     /// </summary>
-    internal class PostDto : BaseDto
+    internal class Post : BaseEntity
     {
         /// <summary>
         /// Заголовок.
@@ -22,22 +20,17 @@ namespace Dashboard.Contracts
         /// <summary>
         /// Описание.
         /// </summary>
-        public string Description { get; set; } 
+        public string Description { get; set; }
 
         /// <summary>
         /// Наименование категории.
         /// </summary>
-        public string CategoryName { get; set; }
+        public Guid CategoryId { get; set; }
 
         /// <summary>
         /// Наименование тегов.
         /// </summary>
         public string[] TagNames { get; set; }
-
-        /// <summary>
-        /// Изображения.
-        /// </summary>
-        IReadOnlyCollection<AttachmentDto> Attachments { get; set; }
 
         /// <summary>
         /// Цена.

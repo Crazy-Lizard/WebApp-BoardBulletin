@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Dashboard.Contracts.Base
+namespace Dashboard.Domain.Base
 {
     /// <summary>
-    /// Базовый контракт.
+    /// Базовая сущность.
     /// </summary>
-    internal class BaseDto
+    internal class BaseEntity
     {
         /// <summary>
         /// Идентификатор сущности.
