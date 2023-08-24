@@ -1,4 +1,4 @@
-﻿using Dashboard.Contracts.Attachment;
+using Dashboard.Contracts.Attachment;
 using Dashboard.Contracts.Base;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 
 namespace Dashboard.Contracts
 {
-
     /// <summary>
     /// Обьявление. 
     /// </summary>
