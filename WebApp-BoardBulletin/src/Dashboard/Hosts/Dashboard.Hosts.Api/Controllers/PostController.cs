@@ -1,6 +1,12 @@
-﻿namespace Dashboard.Hosts.Api.Controllers
+using Microsoft.AspNetCore.Mvc;
+
+namespace Dashboard.Hosts.Api.Controllers
 {
-    public class PostController
+    /// <summary>
+    /// Контроллер для работы с обьявлениями.
+    /// </summary>
+    public class PostController : ControllerBase
     {
+
     }
 }
