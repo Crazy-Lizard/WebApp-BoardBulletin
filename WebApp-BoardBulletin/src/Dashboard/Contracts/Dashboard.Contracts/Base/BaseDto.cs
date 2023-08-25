@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Dashboard.Contracts.Base
 {
+
     /// <summary>
     /// Базовый контракт.
     /// </summary>

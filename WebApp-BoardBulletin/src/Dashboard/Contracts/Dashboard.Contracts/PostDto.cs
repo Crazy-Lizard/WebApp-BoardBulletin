@@ -1,4 +1,4 @@
-using Dashboard.Contracts.Attachment;
+﻿using Dashboard.Contracts.Attachment;
 using Dashboard.Contracts.Base;
 using System;
 using System.Collections.Generic;
