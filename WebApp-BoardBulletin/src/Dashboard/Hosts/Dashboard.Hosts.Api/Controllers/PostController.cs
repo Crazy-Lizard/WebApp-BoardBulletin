@@ -8,7 +8,7 @@ namespace Dashboard.Hosts.Api.Controllers
     public class PostController : ControllerBase
     {
         /// <summary>
-        /// Получает обьявление по идентификатору.
+        /// Возвращает обьявление по идентификатору.
         /// </summary>
         /// <param name="id">Идентификатор обьявления.</param>
         /// <param name="cancellationToken">Отмена операции.</param>
@@ -19,11 +19,13 @@ namespace Dashboard.Hosts.Api.Controllers
         }
 
         /// <summary>
-        /// 
+        /// Возвращает постраничные обьявления.
         /// </summary>
         /// <param name="cancellationToken"></param>
+        /// <param name="pageSize"></param>
+        /// <param name="pageIndex"></param>
         /// <returns></returns>
-        public async Task<IActionResult> GetAllAsync(CancellationToken cancellationToken)
+        public async Task<IActionResult> GetAllAsync(CancellationToken cancellationToken, int pageSize = 10, int pageIndex = 0)
         {
             return Ok();
         }
