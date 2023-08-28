@@ -1,61 +1,64 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Dashboard.Contracts;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Dashboard.Hosts.Api.Controllers
 {
     /// <summary>
-    /// Контроллер для работы с обьявлениями.
+    /// Контроллер для работы с объявлениями.
     /// </summary>
     public class PostController : ControllerBase
     {
         /// <summary>
-        /// Возвращает обьявление по идентификатору.
+        /// Возвращает объявление по идентификатору.
         /// </summary>
-        /// <param name="id">Идентификатор обьявления.</param>
+        /// <param name="id">Идентификатор объявления.</param>
         /// <param name="cancellationToken">Отмена операции.</param>
-        /// <returns>Модель обьявления <see cref="PostDto"/></returns>
+        /// <returns>Модель объявления <see cref="PostDto"/>.</returns>
+        [HttpGet("get-by-id")]
         public async Task<IActionResult> GetByIdAsync(Guid id, CancellationToken cancellationToken)
         {
             return Ok();
         }
 
         /// <summary>
-        /// Возвращает постраничные обьявления.
+        /// Возвращает постраничные объявления.
         /// </summary>
-        /// <param name="cancellationToken"></param>
-        /// <param name="pageSize"></param>
-        /// <param name="pageIndex"></param>
-        /// <returns></returns>
+        /// <param name="cancellationToken">Отмена операции.</param>
+        /// <param name="pageSize">Размер страницы.</param>
+        /// <param name="pageIndex">Номер страницы.</param>
+        /// <returns>Коллекция объявлений <see cref="PostDto"/>.</returns>
+        [HttpGet("get-all-paged")]
         public async Task<IActionResult> GetAllAsync(CancellationToken cancellationToken, int pageSize = 10, int pageIndex = 0)
         {
             return Ok();
         }
 
         /// <summary>
-        /// 
+        /// Создаёт объявление.
         /// </summary>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
-        public async Task<IActionResult> CreateAsync(CancellationToken cancellationToken)
+        /// <param name="cancellationToken">Отмена операции.</param>
+        [HttpPost]
+        public async Task<IActionResult> CreateAsync(PostDto dto, CancellationToken cancellationToken)
+        {
+            return Created(string.Empty, null);
+        }
+
+        /// <summary>
+        /// Редактирует объявления.
+        /// </summary>
+        /// <param name="cancellationToken">Отмена операции.</param>
+        [HttpPut]
+        public async Task<IActionResult> UpdateAsync(PostDto dto, CancellationToken cancellationToken)
         {
             return Ok();
         }
 
         /// <summary>
-        /// 
+        /// Удаляет объявление по идентификатору.
         /// </summary>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
-        public async Task<IActionResult> UpdateAsync(CancellationToken cancellationToken)
-        {
-            return Ok();
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="id"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
+        /// <param name="id">Идентификатор объявления.</param>
+        /// <param name="cancellationToken">Отмена операции.</param>
+        [HttpDelete]
         public async Task<IActionResult> DeleteAsync(Guid id, CancellationToken cancellationToken)
         {
             return Ok();

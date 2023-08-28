@@ -10,7 +10,7 @@ namespace Dashboard.Contracts.Base
     /// <summary>
     /// Базовый контракт.
     /// </summary>
-    internal class BaseDto
+    public class BaseDto
     {
         /// <summary>
         /// Идентификатор сущности.

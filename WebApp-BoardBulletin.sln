@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp-BoardBulletin", "WebApp-BoardBulletin\WebApp-BoardBulletin.csproj", "{6C6DB093-7314-42DC-BD21-71F2E9D0B738}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp-BoardBulletin", "WebApp-BoardBulletin\WebApp-BoardBulletin.csproj", "{6C6DB093-7314-42DC-BD21-71F2E9D0B738}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dashboard.Hosts.Api", "WebApp-BoardBulletin\src\Dashboard\Hosts\Dashboard.Hosts.Api\Dashboard.Hosts.Api.csproj", "{65484CE8-3A1F-4CFD-8D07-C0A9065D9236}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dashboard.Hosts.Api", "WebApp-BoardBulletin\src\Dashboard\Hosts\Dashboard.Hosts.Api\Dashboard.Hosts.Api.csproj", "{65484CE8-3A1F-4CFD-8D07-C0A9065D9236}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B928B83C-EA92-4277-852B-A9FBE2AE8510}"
 EndProject
@@ -23,19 +23,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{CF06CC
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{CEE8919A-2C6D-4717-BCC4-59DB2173E321}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dashboard.Domain", "WebApp-BoardBulletin\src\Dashboard\Domain\Dashboard.Domain\Dashboard.Domain.csproj", "{4A2A3D2C-62BD-4F4C-B5FB-BAD026E16403}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dashboard.Domain", "WebApp-BoardBulletin\src\Dashboard\Domain\Dashboard.Domain\Dashboard.Domain.csproj", "{4A2A3D2C-62BD-4F4C-B5FB-BAD026E16403}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dashboard.Contracts", "WebApp-BoardBulletin\src\Dashboard\Contracts\Dashboard.Contracts\Dashboard.Contracts.csproj", "{76E32729-440B-4AEB-9762-86DE07C3455B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dashboard.Contracts", "WebApp-BoardBulletin\src\Dashboard\Contracts\Dashboard.Contracts\Dashboard.Contracts.csproj", "{76E32729-440B-4AEB-9762-86DE07C3455B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dashboard.Clients", "WebApp-BoardBulletin\src\Dashboard\Clients\Dashboard.Clients\Dashboard.Clients.csproj", "{D3DD1A54-2844-4A76-B2D1-22EEBD0E5A60}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dashboard.Clients", "WebApp-BoardBulletin\src\Dashboard\Clients\Dashboard.Clients\Dashboard.Clients.csproj", "{D3DD1A54-2844-4A76-B2D1-22EEBD0E5A60}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dashboard.Application.AppServices", "WebApp-BoardBulletin\src\Dashboard\Application\Dashboard.Application.AppServices\Dashboard.Application.AppServices.csproj", "{B95D8D90-7352-4A9D-A608-A82E7D8BD32B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dashboard.Application.AppServices", "WebApp-BoardBulletin\src\Dashboard\Application\Dashboard.Application.AppServices\Dashboard.Application.AppServices.csproj", "{B95D8D90-7352-4A9D-A608-A82E7D8BD32B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dashboard.Infrastructure.DataAccess", "WebApp-BoardBulletin\src\Dashboard\Infrastructure\Dashboard.Infrastructure.DataAccess\Dashboard.Infrastructure.DataAccess.csproj", "{2C2E38BB-329A-4E57-9710-9CC92AC96529}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dashboard.Infrastructure.DataAccess", "WebApp-BoardBulletin\src\Dashboard\Infrastructure\Dashboard.Infrastructure.DataAccess\Dashboard.Infrastructure.DataAccess.csproj", "{28E6D6CA-C3E4-47B1-A711-53C5E49B3C36}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dashboard.Infrastructure", "WebApp-BoardBulletin\src\Dashboard\Infrastructure\Dashboard.Infrastructure\Dashboard.Infrastructure.csproj", "{BD177BA1-179F-4C78-A361-C590BDEC2686}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dashboard.Infrastructure", "WebApp-BoardBulletin\src\Dashboard\Infrastructure\Dashboard.Infrastructure\Dashboard.Infrastructure.csproj", "{387E1D16-6F59-494E-9AD0-80204641455C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dashboard.Infrastructure.ComponentRegistrar", "WebApp-BoardBulletin\src\Dashboard\Infrastructure\Dashboard.Infrastructure.ComponentRegistrar\Dashboard.Infrastructure.ComponentRegistrar.csproj", "{9A51F1BB-AB75-4AC2-93B4-213269A925BA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dashboard.Infrastructure.ComponentRegistrar", "WebApp-BoardBulletin\src\Dashboard\Infrastructure\Dashboard.Infrastructure.ComponentRegistrar\Dashboard.Infrastructure.ComponentRegistrar.csproj", "{F253B46E-18D4-4F5B-896B-7087A5975280}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -79,6 +79,18 @@ Global
 		{9A51F1BB-AB75-4AC2-93B4-213269A925BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A51F1BB-AB75-4AC2-93B4-213269A925BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A51F1BB-AB75-4AC2-93B4-213269A925BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28E6D6CA-C3E4-47B1-A711-53C5E49B3C36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28E6D6CA-C3E4-47B1-A711-53C5E49B3C36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28E6D6CA-C3E4-47B1-A711-53C5E49B3C36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28E6D6CA-C3E4-47B1-A711-53C5E49B3C36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{387E1D16-6F59-494E-9AD0-80204641455C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{387E1D16-6F59-494E-9AD0-80204641455C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{387E1D16-6F59-494E-9AD0-80204641455C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{387E1D16-6F59-494E-9AD0-80204641455C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F253B46E-18D4-4F5B-896B-7087A5975280}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F253B46E-18D4-4F5B-896B-7087A5975280}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F253B46E-18D4-4F5B-896B-7087A5975280}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F253B46E-18D4-4F5B-896B-7087A5975280}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -99,6 +111,9 @@ Global
 		{2C2E38BB-329A-4E57-9710-9CC92AC96529} = {CEE8919A-2C6D-4717-BCC4-59DB2173E321}
 		{BD177BA1-179F-4C78-A361-C590BDEC2686} = {CEE8919A-2C6D-4717-BCC4-59DB2173E321}
 		{9A51F1BB-AB75-4AC2-93B4-213269A925BA} = {CEE8919A-2C6D-4717-BCC4-59DB2173E321}
+		{28E6D6CA-C3E4-47B1-A711-53C5E49B3C36} = {CEE8919A-2C6D-4717-BCC4-59DB2173E321}
+		{387E1D16-6F59-494E-9AD0-80204641455C} = {CEE8919A-2C6D-4717-BCC4-59DB2173E321}
+		{F253B46E-18D4-4F5B-896B-7087A5975280} = {CEE8919A-2C6D-4717-BCC4-59DB2173E321}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C3C5D1C8-0360-47A5-8F44-0DFB4F96A859}

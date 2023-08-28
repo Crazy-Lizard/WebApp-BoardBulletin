@@ -20,7 +20,9 @@
     <Folder Include="src\Dashboard\Clients\" />
     <Folder Include="src\Dashboard\Domain\" />
     <Folder Include="src\Dashboard\Hosts\" />
-    <Folder Include="src\Dashboard\Infrastructure\" />
+    <Folder Include="src\Dashboard\Infrastructure\Dashboard.Infrastructure.ComponentRegistrar\" />
+    <Folder Include="src\Dashboard\Infrastructure\Dashboard.Infrastructure.DataAccess\" />
+    <Folder Include="src\Dashboard\Infrastructure\Dashboard.Infrastructure\" />
   </ItemGroup>
 
 </Project>

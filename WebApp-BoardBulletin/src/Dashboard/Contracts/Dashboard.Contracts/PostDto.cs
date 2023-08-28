@@ -10,9 +10,9 @@ namespace Dashboard.Contracts
 {
 
     /// <summary>
-    /// Обьявление. 
+    /// Объявление. 
     /// </summary>
-    internal class PostDto : BaseDto
+    public class PostDto : BaseDto
     {
         /// <summary>
         /// Заголовок.
