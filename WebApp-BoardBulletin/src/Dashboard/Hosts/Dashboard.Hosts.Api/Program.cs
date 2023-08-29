@@ -1,3 +1,5 @@
+using Dashboard.Contracts;
+using Dashboard.Hosts.Api.Controllers;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,21 +11,39 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 //builder.Services.AddSwaggerGen();
 
-builder.Services.AddSwaggerGen(options =>
+builder.Services.AddSwaggerGen(s =>
 {
-    // using System.Reflection;
-    var hostsXmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-    options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, hostsXmlFilename));
-
-    var referencedAssemblies = Assembly.GetExecutingAssembly().GetReferencedAssemblies();
-    foreach (var referencedAssembly in referencedAssemblies)
+    var includeDocsTypesMarkers = new[]
     {
-        if (!referencedAssembly.Name!.Contains("BulletinBoard"))
-            continue;
-        var xmlFilename = $"{referencedAssembly.Name}.xml";
-        options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
+        typeof(PostDto),
+        typeof(PostController)
+    };
+
+    foreach (var marker in includeDocsTypesMarkers)
+    {
+        var xmlName = $"{marker.Assembly.GetName().Name}.xml";
+        var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlName);
+
+        if (File.Exists(xmlPath))
+            s.IncludeXmlComments(xmlPath);
     }
 });
+
+//builder.Services.AddSwaggerGen(options =>
+//{
+//    // using System.Reflection;
+//    var hostsXmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+//    options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, hostsXmlFilename));
+
+//    var referencedAssemblies = Assembly.GetExecutingAssembly().GetReferencedAssemblies();
+//    foreach (var referencedAssembly in referencedAssemblies)
+//    {
+//        if (!referencedAssembly.Name!.Contains("BulletinBoard"))
+//            continue;
+//        var xmlFilename = $"{referencedAssembly.Name}.xml";
+//        options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
+//    }
+//});
 
 var app = builder.Build();
 
