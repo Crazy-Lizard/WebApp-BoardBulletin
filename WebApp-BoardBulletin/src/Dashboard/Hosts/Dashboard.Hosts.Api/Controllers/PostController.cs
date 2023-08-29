@@ -6,6 +6,8 @@ namespace Dashboard.Hosts.Api.Controllers
     /// <summary>
     /// Контроллер для работы с объявлениями.
     /// </summary>
+    [ApiController]
+    [Route("post")]
     public class PostController : ControllerBase
     {
         /// <summary>
