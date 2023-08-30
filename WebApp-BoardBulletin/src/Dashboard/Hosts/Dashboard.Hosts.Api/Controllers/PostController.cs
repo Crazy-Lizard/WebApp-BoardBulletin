@@ -1,5 +1,6 @@
 ﻿using Dashboard.Contracts;
 using Microsoft.AspNetCore.Mvc;
+using System.Net;
 
 namespace Dashboard.Hosts.Api.Controllers
 {
@@ -13,10 +14,17 @@ namespace Dashboard.Hosts.Api.Controllers
         /// <summary>
         /// Возвращает объявление по идентификатору.
         /// </summary>
+        /// <remarks>
+        /// Пример:
+        /// curl 
+        /// </remarks>
         /// <param name="id">Идентификатор объявления.</param>
         /// <param name="cancellationToken">Отмена операции.</param>
         /// <returns>Модель объявления <see cref="PostDto"/>.</returns>
         [HttpGet("get-by-id")]
+        [ProducesResponseType(typeof(PostDto), (int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.NotFound)]
+        [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
         public async Task<IActionResult> GetByIdAsync(Guid id, CancellationToken cancellationToken)
         {
             return Ok();

@@ -13,6 +13,10 @@
             <summary>
             Возвращает объявление по идентификатору.
             </summary>
+            <remarks>
+            Пример:
+            curl 
+            </remarks>
             <param name="id">Идентификатор объявления.</param>
             <param name="cancellationToken">Отмена операции.</param>
             <returns>Модель объявления <see cref="T:Dashboard.Contracts.PostDto"/>.</returns>
