@@ -39,6 +39,8 @@ namespace Dashboard.Hosts.Api.Controllers
         public async Task<IActionResult> GetByIdAsync(Guid id, CancellationToken cancellationToken)
         {
             var result = await _postService.GetByIdAsync(id, cancellationToken);
+            if (result == null)
+                return NotFound(result);
             return Ok(result);
         }
 
