@@ -9,13 +9,18 @@
             Контроллер для работы с объявлениями.
             </summary>
         </member>
+        <member name="M:Dashboard.Hosts.Api.Controllers.PostController.#ctor(Dashboard.Application.AppServices.Contexts.Posts.Services.IPostService)">
+            <summary>
+            Инициализирует экземпляр <see cref="T:Dashboard.Hosts.Api.Controllers.PostController"/>
+            </summary>
+            <param name="postService">Сервис работы с объявлениями.</param>
+        </member>
         <member name="M:Dashboard.Hosts.Api.Controllers.PostController.GetByIdAsync(System.Guid,System.Threading.CancellationToken)">
             <summary>
             Возвращает объявление по идентификатору.
             </summary>
             <remarks>
-            Пример:
-            curl 
+            Пример: curl -X 'GET' \'https://localhost:port/post/get-by-id'
             </remarks>
             <param name="id">Идентификатор объявления.</param>
             <param name="cancellationToken">Отмена операции.</param>
@@ -25,6 +30,9 @@
             <summary>
             Возвращает постраничные объявления.
             </summary>
+            <remarks>
+            Пример: curl -X 'GET' \ 'https://localhost:port/post/get-all-by-pages?pageSize=10&amp;pageIndex=0'
+            </remarks>
             <param name="cancellationToken">Отмена операции.</param>
             <param name="pageSize">Размер страницы.</param>
             <param name="pageIndex">Номер страницы.</param>

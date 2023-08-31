@@ -1,4 +1,5 @@
-﻿using Dashboard.Contracts;
+﻿using Dashboard.Application.AppServices.Contexts.Posts.Services;
+using Dashboard.Contracts;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
@@ -11,12 +12,22 @@ namespace Dashboard.Hosts.Api.Controllers
     [Route("post")]
     public class PostController : ControllerBase
     {
+        private readonly IPostService _postService;
+
+        /// <summary>
+        /// Инициализирует экземпляр <see cref="PostController"/>
+        /// </summary>
+        /// <param name="postService">Сервис работы с объявлениями.</param>
+        public PostController(IPostService postService)
+        {
+            _postService = postService;
+        }
+
         /// <summary>
         /// Возвращает объявление по идентификатору.
         /// </summary>
         /// <remarks>
-        /// Пример:
-        /// curl 
+        /// Пример: curl -X 'GET' \'https://localhost:port/post/get-by-id'
         /// </remarks>
         /// <param name="id">Идентификатор объявления.</param>
         /// <param name="cancellationToken">Отмена операции.</param>
@@ -27,12 +38,16 @@ namespace Dashboard.Hosts.Api.Controllers
         [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
         public async Task<IActionResult> GetByIdAsync(Guid id, CancellationToken cancellationToken)
         {
-            return Ok();
+            var result = await _postService.GetByIdAsync(id, cancellationToken);
+            return Ok(result);
         }
 
         /// <summary>
         /// Возвращает постраничные объявления.
         /// </summary>
+        /// <remarks>
+        /// Пример: curl -X 'GET' \ 'https://localhost:port/post/get-all-by-pages?pageSize=10&amp;pageIndex=0'
+        /// </remarks>
         /// <param name="cancellationToken">Отмена операции.</param>
         /// <param name="pageSize">Размер страницы.</param>
         /// <param name="pageIndex">Номер страницы.</param>
@@ -48,6 +63,9 @@ namespace Dashboard.Hosts.Api.Controllers
         /// </summary>
         /// <param name="cancellationToken">Отмена операции.</param>
         [HttpPost]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> CreateAsync(PostDto dto, CancellationToken cancellationToken)
         {
             return Created(string.Empty, null);

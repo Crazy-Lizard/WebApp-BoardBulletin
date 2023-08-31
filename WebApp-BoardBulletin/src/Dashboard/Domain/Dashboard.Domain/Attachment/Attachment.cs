@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Dashboard.Contracts.Attachment
+namespace Dashboard.Domain.Attachment
 {
     /// <summary>
     /// Вложение.

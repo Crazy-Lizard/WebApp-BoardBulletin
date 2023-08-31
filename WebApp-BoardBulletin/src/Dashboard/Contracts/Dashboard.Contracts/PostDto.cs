@@ -37,7 +37,7 @@ namespace Dashboard.Contracts
         /// <summary>
         /// Изображения.
         /// </summary>
-        IReadOnlyCollection<AttachmentDto> Attachments { get; set; }
+        public IReadOnlyCollection<AttachmentDto> Attachments { get; set; }
 
         /// <summary>
         /// Цена.

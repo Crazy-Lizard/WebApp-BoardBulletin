@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Application\Dashboard.Application.AppServices\Dashboard.Application.AppServices.csproj" />
+    <ProjectReference Include="..\..\Contracts\Dashboard.Contracts\Dashboard.Contracts.csproj" />
+  </ItemGroup>
+
 </Project>

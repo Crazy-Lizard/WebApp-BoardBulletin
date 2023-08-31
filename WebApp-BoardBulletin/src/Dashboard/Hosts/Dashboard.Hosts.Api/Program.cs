@@ -1,6 +1,9 @@
+using Dashboard.Application.AppServices.Contexts.Posts.Repositories;
+using Dashboard.Application.AppServices.Contexts.Posts.Services;
 using Dashboard.Contracts;
 using Dashboard.Contracts.Attachment;
 using Dashboard.Hosts.Api.Controllers;
+using Dashboard.Infrastructure.DataAccess.Contexts.Posts.Repositories;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -45,6 +48,9 @@ builder.Services.AddSwaggerGen(s =>
 //        options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
 //    }
 //});
+
+builder.Services.AddTransient<IPostService, PostService>();
+builder.Services.AddTransient<IPostRepository, PostRepository>();
 
 var app = builder.Build();
 
