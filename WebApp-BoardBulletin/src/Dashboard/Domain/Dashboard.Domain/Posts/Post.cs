@@ -1,4 +1,5 @@
-﻿using Dashboard.Domain.Base;
+﻿using Dashboard.Domain.Attachment;
+using Dashboard.Domain.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,6 +32,11 @@ namespace Dashboard.Domain.Posts
         /// Наименование тегов.
         /// </summary>
         public string[] TagNames { get; set; }
+
+        /// <summary>
+        /// Изображения.
+        /// </summary>
+        public IReadOnlyCollection<AttachmentDto> Attachments { get; set; }
 
         /// <summary>
         /// Цена.
