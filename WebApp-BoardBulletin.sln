@@ -37,8 +37,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dashboard.Infrastructure", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dashboard.Infrastructure.ComponentRegistrar", "WebApp-BoardBulletin\src\Dashboard\Infrastructure\Dashboard.Infrastructure.ComponentRegistrar\Dashboard.Infrastructure.ComponentRegistrar.csproj", "{F253B46E-18D4-4F5B-896B-7087A5975280}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Post", "Post", "{2322AF64-B421-4CDB-B663-AA4853699B39}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -101,7 +99,6 @@ Global
 		{28E6D6CA-C3E4-47B1-A711-53C5E49B3C36} = {CEE8919A-2C6D-4717-BCC4-59DB2173E321}
 		{387E1D16-6F59-494E-9AD0-80204641455C} = {CEE8919A-2C6D-4717-BCC4-59DB2173E321}
 		{F253B46E-18D4-4F5B-896B-7087A5975280} = {CEE8919A-2C6D-4717-BCC4-59DB2173E321}
-		{2322AF64-B421-4CDB-B663-AA4853699B39} = {43F22A5E-A08C-4B37-8148-16EE7BAFE1A0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C3C5D1C8-0360-47A5-8F44-0DFB4F96A859}

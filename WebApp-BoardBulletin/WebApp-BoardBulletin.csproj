@@ -16,7 +16,6 @@
 
   <ItemGroup>
     <Folder Include="src\Dashboard\Application\" />
-    <Folder Include="src\Dashboard\Contracts\" />
     <Folder Include="src\Dashboard\Clients\" />
     <Folder Include="src\Dashboard\Domain\" />
     <Folder Include="src\Dashboard\Hosts\" />

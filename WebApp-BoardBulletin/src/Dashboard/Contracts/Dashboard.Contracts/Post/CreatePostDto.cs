@@ -1,17 +1,12 @@
-﻿using Dashboard.Domain.Attachment;
-using Dashboard.Domain.Base;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Dashboard.Domain.Posts
+namespace Dashboard.Contracts.Post
 {
-    /// <summary>
-    /// Сущность объявлений.
-    /// </summary>
-    public class Post : BaseEntity
+    public class CreatePostDto
     {
         /// <summary>
         /// Заголовок.
@@ -24,7 +19,7 @@ namespace Dashboard.Domain.Posts
         public string Description { get; set; }
 
         /// <summary>
-        /// Наименование категории.
+        /// Идентификатор категории.
         /// </summary>
         public Guid CategoryId { get; set; }
 
@@ -32,11 +27,6 @@ namespace Dashboard.Domain.Posts
         /// Наименование тегов.
         /// </summary>
         public string[] TagNames { get; set; }
-
-        /// <summary>
-        /// Изображения.
-        /// </summary>
-        public IReadOnlyCollection<AttachmentDto> Attachments { get; set; }
 
         /// <summary>
         /// Цена.

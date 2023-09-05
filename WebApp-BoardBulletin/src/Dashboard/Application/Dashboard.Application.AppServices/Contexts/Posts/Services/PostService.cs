@@ -1,5 +1,7 @@
 ﻿using Dashboard.Application.AppServices.Contexts.Posts.Repositories;
 using Dashboard.Contracts;
+using Dashboard.Contracts.Post;
+using Dashboard.Domain.Posts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,6 +28,20 @@ namespace Dashboard.Application.AppServices.Contexts.Posts.Services
         public Task<PostDto> GetByIdAsync(Guid id, CancellationToken cancellationToken)
         {
             return _postRepository.GetByIdAsync(id, cancellationToken);
+        }
+
+        /// <inheritdoc />
+        public Task<Guid> CreateAsync(CreatePostDto model, CancellationToken cancellationToken)
+        {
+            var post = new Post()
+            {
+                Description = model.Description,
+                Price = model.Price,
+                Title = model.Title,
+                CategoryId = model.CategoryId,
+                TagNames = model.TagNames,
+            };
+            return _postRepository.CreateAsync(post, cancellationToken);
         }
     }
 }
