@@ -1,5 +1,8 @@
-﻿using System;
+﻿using BulletinBoard.Contracts.Attributes;
+using Dashboard.Contracts.Attachment;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,26 +14,37 @@ namespace Dashboard.Contracts.Post
         /// <summary>
         /// Заголовок.
         /// </summary>
+        [Required(AllowEmptyStrings = false)]
+        [StringLength(50)]
         public string Title { get; set; }
 
         /// <summary>
         /// Описание.
         /// </summary>
+        [Required(AllowEmptyStrings = false)]
+        [StringLength(150)]
         public string Description { get; set; }
 
         /// <summary>
         /// Идентификатор категории.
         /// </summary>
-        public Guid CategoryId { get; set; }
+        public required Guid CategoryId { get; set; }
 
         /// <summary>
         /// Наименование тегов.
         /// </summary>
-        public string[] TagNames { get; set; }
+        public required string[] TagNames { get; set; }
+
+        /// <summary>
+        /// Изображения.
+        /// </summary>
+        [Limit(1, 5)]
+        public required IReadOnlyCollection<AttachmentDto> Attachments { get; set; }
 
         /// <summary>
         /// Цена.
         /// </summary>
-        public decimal Price { get; set; }
+        [Range(0, double.MaxValue)]
+        public required decimal Price { get; set; }
     }
 }

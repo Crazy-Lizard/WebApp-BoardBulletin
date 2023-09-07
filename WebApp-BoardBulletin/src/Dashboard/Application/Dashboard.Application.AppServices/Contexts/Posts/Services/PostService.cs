@@ -40,6 +40,7 @@ namespace Dashboard.Application.AppServices.Contexts.Posts.Services
                 Title = model.Title,
                 CategoryId = model.CategoryId,
                 TagNames = model.TagNames,
+                Attachments = (IReadOnlyCollection<Domain.Attachment.AttachmentDto>)model.Attachments,
             };
             return _postRepository.CreateAsync(post, cancellationToken);
         }

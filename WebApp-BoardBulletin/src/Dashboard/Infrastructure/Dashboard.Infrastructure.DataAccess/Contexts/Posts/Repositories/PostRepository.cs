@@ -26,7 +26,7 @@ namespace Dashboard.Infrastructure.DataAccess.Contexts.Posts.Repositories
                 Description = "Тестовое описание",
                 CategoryName = "Тестовая категория",
                 TagNames = new[] { "Тестовые", "Теги" },
-                //Attachments = new[] { new AttachmentEntity { Id = Guid.NewGuid(), Content = new byte[] { 111, 222, 11, 254 } } },
+                Attachments = new[] { new AttachmentDto { Id = Guid.NewGuid(), Content = new byte[] { 111, 222, 11, 254 } } },
                 Price = 100,
             }, cancellationToken);
         }

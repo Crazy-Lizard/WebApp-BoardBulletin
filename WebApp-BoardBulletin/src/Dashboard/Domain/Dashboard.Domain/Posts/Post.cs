@@ -16,17 +16,17 @@ namespace Dashboard.Domain.Posts
         /// <summary>
         /// Заголовок.
         /// </summary>
-        public string Title { get; set; }
+        public required string Title { get; set; }
 
         /// <summary>
         /// Описание.
         /// </summary>
-        public string Description { get; set; }
+        public required string Description { get; set; }
 
         /// <summary>
         /// Наименование категории.
         /// </summary>
-        public Guid CategoryId { get; set; }
+        public required Guid CategoryId { get; set; }
 
         /// <summary>
         /// Наименование тегов.
@@ -36,11 +36,11 @@ namespace Dashboard.Domain.Posts
         /// <summary>
         /// Изображения.
         /// </summary>
-        public IReadOnlyCollection<AttachmentDto> Attachments { get; set; }
+        public required IReadOnlyCollection<AttachmentDto> Attachments { get; set; }
 
         /// <summary>
         /// Цена.
         /// </summary>
-        public decimal Price { get; set; }
+        public required decimal Price { get; set; }
     }
 }
