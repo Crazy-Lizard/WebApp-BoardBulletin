@@ -1,5 +1,6 @@
 ﻿using Dashboard.Application.AppServices.Contexts.Posts.Services;
 using Dashboard.Contracts;
+using Dashboard.Contracts.Post;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
@@ -63,14 +64,17 @@ namespace Dashboard.Hosts.Api.Controllers
         /// <summary>
         /// Создаёт объявление.
         /// </summary>
+        /// <param name="dto">Модель для создания объявления.</param>
         /// <param name="cancellationToken">Отмена операции.</param>
+        /// <returns>Идентификатор созданной сущности.</returns>
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> CreateAsync(PostDto dto, CancellationToken cancellationToken)
+        public async Task<IActionResult> CreateAsync(CreatePostDto dto, CancellationToken cancellationToken)
         {
-            return Created(string.Empty, null);
+            var modelId = await _postService.CreateAsync(dto, cancellationToken);
+            return Created(nameof(CreateAsync),modelId);
         }
 
         /// <summary>

@@ -19,5 +19,13 @@ namespace Dashboard.Application.AppServices.Contexts.Posts.Repositories
         /// <param name="cancellationToken">Отмена операции.</param>
         /// <returns>Модель объявления <see cref="PostDto"/>.</returns>
         Task<PostDto> GetByIdAsync(Guid id, CancellationToken cancellationToken);
+
+        /// <summary>
+        /// Создаёт объявление по модели.
+        /// </summary>
+        /// <param name="model">Модель объявление.</param>
+        /// <param name="cancellationToken">Отмена операции.</param>
+        /// <returns>Идентификатор созданной сущности.</returns>
+        Task<Guid> CreateAsync(Domain.Posts.Post model, CancellationToken cancellationToken);
     }
 }

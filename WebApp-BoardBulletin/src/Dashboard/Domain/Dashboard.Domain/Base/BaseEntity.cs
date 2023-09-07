@@ -9,7 +9,7 @@ namespace Dashboard.Domain.Base
     /// <summary>
     /// Базовая сущность.
     /// </summary>
-    internal class BaseEntity
+    public class BaseEntity
     {
         /// <summary>
         /// Идентификатор сущности.

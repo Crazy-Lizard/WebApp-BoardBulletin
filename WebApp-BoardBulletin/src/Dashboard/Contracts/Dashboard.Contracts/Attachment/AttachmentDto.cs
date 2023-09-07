@@ -15,6 +15,6 @@ namespace Dashboard.Contracts.Attachment
         /// <summary>
         /// Содержимое вложения в виде массива байтов.
         /// </summary>
-        public byte[] Content { get; init; }
+        public required byte[] Content { get; init; }
     }
 }
