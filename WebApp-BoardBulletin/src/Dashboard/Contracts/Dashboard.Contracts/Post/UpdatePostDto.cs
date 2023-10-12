@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Dashboard.Contracts.Post
 {
-    public class UpdatePostDto : CreatePostDto
-    {
-    }
+    /// <summary>
+    /// Обновление объявления.
+    /// </summary>
+    public class UpdatePostDto : CreatePostDto {}
 }
