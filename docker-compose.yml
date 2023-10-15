@@ -1,0 +1,49 @@
+version: '3.7'
+
+services:
+  api:
+        container_name: board-bulletin-api
+        build:
+            context: .
+            dockerfile: WebApp-BoardBulletin/src/Dashboard/Hosts/Dashboard.Hosts.Api/Dockerfile
+        ports:
+          - 5000:80
+        environment:
+            - ConnectionStrings__PGBoardBulletinDB=Server=postgres;Database=Board;Username=postgres;Password=password;Port=5432
+        networks:
+            - 'web-app-board-bulletin'
+        depends_on:
+            - "postgres"
+
+  migrator:
+        container_name: board-bulletin-migrator
+        build:
+            context: .
+            dockerfile: WebApp-BoardBulletin/src/Dashboard/Hosts/Dashboard.Hosts.Api/Dockerfile
+        environment:
+            - ConnectionStrings__PGBoardBulletinDB=Server=postgres;Database=Board;Username=postgres;Password=password;Port=5432
+        networks:
+            - 'web-app-board-bulletin'
+        depends_on:
+            - "postgres"
+        restart: on-failure:5
+
+  postgres:
+        container_name: postgres
+        image: postgres
+        environment:
+            POSTGRES_DB: "Board"
+            POSTGRES_USER: postgres
+            POSTGRES_PASSWORD: password
+        volumes: 
+          - pg-data:/var/lib/postgresql/data
+        ports:
+          - '5432:5432'
+        networks:
+          - 'web-app-board-bulletin'
+
+volumes:
+  pg-data:
+  
+networks:
+  bulletin-board-web-app:
